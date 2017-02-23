@@ -1,16 +1,19 @@
 package gui;
+
+import activeobject.Canal;
 import activeobject.capteur.Capteur;
-import activeobject.capteur.CapteurImpl;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+
 import javafx.stage.Stage;
+import activeobject.capteur.CapteurImpl;
 import javafx.application.Application;
 
 
 
 /**
- * Created by aroua on 18/01/17.
+ * Created by fadhloun on 17/01/17.
  */
 
 public class Main extends Application{
@@ -31,7 +34,13 @@ public class Main extends Application{
         Controlleur controlleur =(Controlleur)fxmlLoader.getController();
         Capteur capteur=new CapteurImpl();
         controlleur.configure(capteur);
+        Canal canal=new Canal(capteur);
+        for(Afficheur obs: controlleur.getAfficheursObs()){
+            canal.attach(obs);
+        }
 
+
+        capteur.attach(canal);
 
 
 

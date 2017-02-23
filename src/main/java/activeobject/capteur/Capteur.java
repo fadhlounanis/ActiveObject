@@ -3,12 +3,13 @@ package activeobject.capteur;
 
 
 import activeobject.AlgorithmeDiffusion;
+import activeobject.SujetAsynchrone;
 
 
 /**
  * Created by fadhloun on 19/01/17.
  */
-public interface Capteur  {
+public interface Capteur extends SujetAsynchrone {
 
 
     int getValue();

@@ -5,7 +5,7 @@ import activeobject.capteur.Capteur;
 import java.util.List;
 
 /**
- * Created by aroua on 20/01/17.
+ * Created by fadhloun on 20/01/17.
  */
 public interface AlgorithmeDiffusion {
 

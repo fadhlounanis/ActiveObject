@@ -43,7 +43,10 @@ public class Controlleur {
 
     }
 
-
+    @FXML
+    public void appliquerAtom(){
+        capteur.setAlgorithme(new DiffusionAtomique());
+    }
 
     public void configure(Capteur capteur){this.capteur=capteur;}
 
@@ -51,10 +54,6 @@ public class Controlleur {
         return afficheursObs;
     }
 
-    @FXML
-    public void appliquerAtom(){
-        capteur.setAlgorithme(new DiffusionAtomique());
-    }
 
 
 

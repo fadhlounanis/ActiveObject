@@ -21,23 +21,7 @@ public class CapteurImpl implements Capteur {
 
     public CapteurImpl(){
         valeur=0;
-        gestionnaireAlgorithme.changer(new AlgorithmeDiffusion() {
-            public void configure(Capteur capteur, List<ObserveurAsynchrone> observeurs) {
-
-            }
-
-            public void arreterScheduler() {
-
-            }
-
-            public short getId() {
-                return 0;
-            }
-
-            public void execute() {
-
-            }
-        }, this, observeurs);
+        gestionnaireAlgorithme.changer(new DiffusionAtomique(), this,observeurs);
 
     }
 
