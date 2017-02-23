@@ -6,26 +6,28 @@
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controlleur">
-    <items>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-            <children>
-                <Button layoutX="16.0" layoutY="186.0" mnemonicParsing="false"  text="Diffusion Atomique" />
-            </children></AnchorPane>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-            <children>
-                <TitledPane animated="false" prefHeight="398.0" prefWidth="416.0" text="Afficheurs du canal">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                            <children>
-                                <Label fx:id="aff1" layoutX="159.0" layoutY="22.0" text="Label" />
-                                <Label fx:id="aff2" layoutX="159.0" layoutY="110.0" text="Label" />
-                                <Label fx:id="aff3" layoutX="159.0" layoutY="206.0" text="Label" />
-                                <Label fx:id="aff4" layoutX="159.0" layoutY="302.0" text="Label" />
-                            </children>
-                        </AnchorPane>
-                    </content>
-                </TitledPane>
-            </children></AnchorPane>
-    </items>
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controlleur">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+             <Button layoutX="5.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#appliquerAtom" text="Diffusion Atomique" />
+             <Button layoutX="5.0" layoutY="152.0" mnemonicParsing="false" text="Diffusion Sequencielle" />
+            <Button layoutX="5.0" layoutY="287.0" mnemonicParsing="false" text="Gestion par époque" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TitledPane animated="false" prefHeight="398.0" prefWidth="416.0" text="Afficheurs du canal">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="aff1" layoutX="159.0" layoutY="22.0" text="Label" />
+                        <Label fx:id="aff2" layoutX="159.0" layoutY="110.0" text="Label" />
+                        <Label fx:id="aff3" layoutX="159.0" layoutY="206.0" text="Label" />
+                        <Label fx:id="aff4" layoutX="159.0" layoutY="302.0" text="Label" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+         </children></AnchorPane>
+  </items>
 </SplitPane>

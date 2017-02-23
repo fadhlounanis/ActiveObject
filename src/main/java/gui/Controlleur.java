@@ -1,6 +1,7 @@
 package gui;
 
 import activeobject.capteur.Capteur;
+import activeobject.capteur.DiffusionAtomique;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import java.util.ArrayList;
@@ -50,6 +51,10 @@ public class Controlleur {
         return afficheursObs;
     }
 
+    @FXML
+    public void appliquerAtom(){
+        capteur.setAlgorithme(new DiffusionAtomique());
+    }
 
 
 
