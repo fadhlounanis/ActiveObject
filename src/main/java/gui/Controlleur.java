@@ -49,7 +49,6 @@ public class Controlleur {
         capteur.setAlgorithme(new DiffusionAtomique());
     }
 
-
     @FXML
     public void appliquerSequentielle(){
         capteur.setAlgorithme(new DiffusionSequentielle());
