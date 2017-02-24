@@ -1,4 +1,5 @@
-package activeobject;
+package activeobject.capteur;
+import activeobject.ObserveurAsynchrone;
 import activeobject.capteur.Capteur;
 
 

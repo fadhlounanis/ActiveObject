@@ -11,7 +11,7 @@
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
              <Button layoutX="5.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#appliquerAtom" text="Diffusion Atomique" />
-             <Button layoutX="5.0" layoutY="152.0" mnemonicParsing="false" text="Diffusion Sequencielle" />
+             <Button layoutX="5.0" layoutY="152.0" mnemonicParsing="false" onMouseClicked="#appliquerSequentielle"  text="Diffusion Sequencielle" />
             <Button layoutX="5.0" layoutY="287.0" mnemonicParsing="false" text="Gestion par époque" />
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">

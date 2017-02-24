@@ -1,11 +1,11 @@
-package activeobject;
+package activeobject.capteur;
 
-import activeobject.capteur.Capteur;
+import activeobject.ObserveurAsynchrone;
 
 import java.util.List;
 
 /**
- * Created by fadhloun on 20/01/17.
+ * Created by aroua on 20/01/17.
  */
 
 public class GestionnaireAlgorithme {

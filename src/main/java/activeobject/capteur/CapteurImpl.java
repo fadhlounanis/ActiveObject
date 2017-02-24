@@ -1,9 +1,6 @@
 package activeobject.capteur;
 
-import activeobject.AlgorithmeDiffusion;
-import activeobject.GestionnaireAlgorithme;
 import activeobject.ObserveurAsynchrone;
-import activeobject.capteur.Capteur;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,23 +18,7 @@ public class CapteurImpl implements Capteur {
 
     public CapteurImpl(){
         valeur=0;
-        gestionnaireAlgorithme.changer(new AlgorithmeDiffusion() {
-            public void configure(Capteur capteur, List<ObserveurAsynchrone> observeurs) {
-
-            }
-
-            public void arreterScheduler() {
-
-            }
-
-            public short getId() {
-                return 0;
-            }
-
-            public void execute() {
-
-            }
-        }, this, observeurs);
+        gestionnaireAlgorithme.changer(new DiffusionAtomique(), this,observeurs);
 
     }
 

@@ -1,7 +1,6 @@
 package activeobject.capteur;
 
 
-import activeobject.AlgorithmeDiffusion;
 import activeobject.ObserveurAsynchrone;
 import java.util.List;
 import java.util.concurrent.*;
