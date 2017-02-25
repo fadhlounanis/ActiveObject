@@ -22,6 +22,9 @@ import java.util.concurrent.Future;
 public class Afficheur implements ObserveurDeCap {
 
     private Label label;
+
+    private int dernierTimestamp =-1;
+
     public void setLabel(Label newLabel){
         label=newLabel;
     }
@@ -34,6 +37,9 @@ public class Afficheur implements ObserveurDeCap {
         try {
             Future<FutureEpoque> future=capteur.getValueEpoque();
             FutureEpoque futureEpoque=future.get();
+            if(dernierTimestamp <futureEpoque.getTimeStamp()) {
+                setTextWithTimestamp(futureEpoque.getValue(),futureEpoque.getTimeStamp());
+            }
         } catch (Exception ex){
             ex.printStackTrace();
 
@@ -68,6 +74,14 @@ public class Afficheur implements ObserveurDeCap {
         Platform.runLater(new Runnable() {
             public void run() {
                 label.setText("Valeur : " + val);
+            }
+        });
+    }
+
+    private void setTextWithTimestamp(final int val, final int timestamp){
+        Platform.runLater(new Runnable() {
+            public void run() {
+                label.setText("Valeur : " + val + " Timestamp : "+timestamp);
             }
         });
     }
