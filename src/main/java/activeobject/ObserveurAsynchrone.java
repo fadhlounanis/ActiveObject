@@ -7,4 +7,5 @@ import java.util.concurrent.Future;
  */
 public interface ObserveurAsynchrone {
         Future update();
+        Future updateTimestamp();
 }

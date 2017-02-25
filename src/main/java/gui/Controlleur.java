@@ -2,6 +2,7 @@ package gui;
 
 import activeobject.capteur.Capteur;
 import activeobject.capteur.DiffusionAtomique;
+import activeobject.capteur.DiffusionEpoque;
 import activeobject.capteur.DiffusionSequentielle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -52,6 +53,11 @@ public class Controlleur {
     @FXML
     public void appliquerSequentielle(){
         capteur.setAlgorithme(new DiffusionSequentielle());
+    }
+
+    @FXML
+    public void appliquerParEpoque(){
+        capteur.setAlgorithme(new DiffusionEpoque());
     }
 
     public void configure(Capteur capteur){this.capteur=capteur;}
